@@ -17,7 +17,7 @@ public class QuickSortTest {
         int[] nums = {0, 12, 17, 13, 5, 8, 6, 15, 3, 22, 36, 49, 1, 50};
         System.out.println("排序前: " + Arrays.toString(nums));
         quickSort(nums, 0, nums.length - 1);
-        System.out.println("\n\n排序后: " + Arrays.toString(nums));
+        System.out.println("\n排序后: " + Arrays.toString(nums));
     }
 
     public static void quickSort(int[] nums, int start, int end) {
