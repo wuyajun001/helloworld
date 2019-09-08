@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @version 1.0
  * @date 2018/8/8 13:44
  */
-public class SelectSort {
+public class SelectSortTest {
 
     public static void main(String[] args) {
         int[] nums = {0, 12, 17, 13, 5, 8, 6, 15, 3, 22, 36, 49, 1, 50};
