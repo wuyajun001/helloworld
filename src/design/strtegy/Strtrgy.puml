@@ -1,0 +1,37 @@
+@startuml
+title  策略模式
+
+interface InterfaceStrtegy{
+    + void operate();
+}
+
+class StrtegyOne {
+    + void operate(){这是第一个策略}
+}
+
+class StrtegyTwo{
+    + void operate(){这是第二个策略}
+}
+
+class StrtegyThree {
+    + void operate(){这是第三个策略}
+}
+
+class Context{
+    - InterfaceStrtegy interfaceStrtegy;
+    + Context(InterfaceStrtegy interfaceStrtegy){将传入的策略构造为锦囊};
+    + void operate(){执行对应的策略}
+}
+
+class Caller{
+    + void main(String[] args){}
+}
+
+Caller ..> Context
+Context ..> InterfaceStrtegy
+
+InterfaceStrtegy <|..StrtegyOne
+InterfaceStrtegy <|..StrtegyTwo
+InterfaceStrtegy <|..StrtegyThree
+
+@enduml

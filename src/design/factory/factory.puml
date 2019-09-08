@@ -1,0 +1,54 @@
+@startuml
+title <size:30><b>工厂模式</b></size>
+
+interface Human{
+    定义人类的三中行为,如:高兴,哭泣,交谈
+    + void laugh();
+    + void talk();
+    + void cry();
+}
+
+class BlackMan{
+    + void laugh(){黑人很高兴}
+    + void talk(){黑人用印第安语交谈}
+    + void cry(){黑人也会哭}
+}
+
+class YellowMan{
+    + void laugh(){黄种人很高兴}
+    + void talk(){黄种人用汉语交谈}
+    + void cry(){黄种人也会哭}
+}
+
+class WriteMan{
+    + void laugh(){白人很高兴}
+    + void talk(){白人用英语交谈}
+    + void cry(){白人也会哭}
+}
+
+class HumanFactory{
+    1.有参方法根据指定实现类创建特定的人种;
+    2.无参方法获取所有实现类,随机产生一个人
+    + Human creatHuman(Class class){}
+    + Human creatHuman(){ClassUtils.getAllInvoice}
+}
+
+class ClassUtils{
+    工具类: 获取一个接口同包下的所有实现类
+    + List<Class> getAllInvoice()
+}
+
+class NvWa {
+    女娲造人
+    + void main(String[] args){
+        Human.creatHuman(YellowMan.class);
+        Human.creatHuman()}
+}
+
+Human <|..BlackMan
+Human<|..YellowMan
+Human<|..WriteMan
+HumanFactory ..> Human
+NvWa ..> HumanFactory
+
+@enduml

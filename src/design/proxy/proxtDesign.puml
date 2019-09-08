@@ -1,0 +1,34 @@
+@startuml
+title 代理模式
+interface EntertainmentCircle{
+    +void song();
+    +void dancing();
+}
+
+class Broker{
+    -EntertainmentCircle entertainmentCircle;
+    +broker() {default LiuYiFei}
+    +broker(EntertainmentCircle entertainmentCircle) {}
+    +void song(){}
+    +void dancing(){}
+}
+EntertainmentCircle <|..Broker
+
+class SaDingDing{
+    +void song(){}
+    +void dancing(){}
+}
+SaDingDing ..|> EntertainmentCircle
+
+class LiuYiFei {
+    +void song(){}
+    +void dancing(){}
+}
+LiuYiFei ..|> EntertainmentCircle
+
+class WuYaJun{
+    + void main(String[] args) {}
+}
+WuYaJun ..> Broker
+
+@enduml
