@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * description:<TODO>
+ * description:<位图运算>
  *
  * @author 武亚军 (wuyajun0928@aliyun.com)
  * @version 1.0
